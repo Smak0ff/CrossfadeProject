@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_size">12dp</dimen>
+    <dimen name="normal_size">14dp</dimen>
+    <dimen name="big_size">14dp</dimen>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="double_horizontal_margin">32dp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="double_vertical_margin">20dp</dimen>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/crossFadeHintId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_seekBar"
+        android:textSize="@dimen/small_size"
+        android:textColor="@color/colorGrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/seekBarId"
+        android:layout_marginStart="@dimen/double_horizontal_margin"/>
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/seekBarId"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:dsb_min="2"
+        app:dsb_max="10"
+        app:dsb_value="5"
+        app:dsb_allowTrackClickToDrag="true"
+        app:dsb_progressColor="@color/progressColor"
+        style="@style/seekbar_style">
+    </org.adw.library.widgets.discreteseekbar.DiscreteSeekBar>
+
+    <RadioGroup
+        android:id="@+id/radioGroupId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarId"
+        style="@style/radiogroup_style">
+
+        <RadioButton
+            android:id="@+id/radioButtonAcdcId"
+            android:checked="true"
+            android:text="@string/acdc"
+            style="@style/radiobutton_style" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRhcpId"
+            style="@style/radiobutton_style"
+            android:text="@string/rhcp" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/toggleButtonId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupId"
+        style="@style/togglebutton_style" />
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonId"
+        style="@style/separator_style"></View>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
