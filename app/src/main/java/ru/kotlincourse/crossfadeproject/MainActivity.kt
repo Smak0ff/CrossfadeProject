@@ -36,16 +36,11 @@ class MainActivity : AppCompatActivity(),CompoundButton.OnCheckedChangeListener 
                     try {
                         when (radioGroupId.checkedRadioButtonId) {
                             R.id.radioButtonAcdcId -> {
-                                while (true) {
-
-                                    playTrackOne(acdcMediaPlayer, rhcpMediaPlayer, seekBarId)
-                                }
+                                while (true) { playTrackOne(acdcMediaPlayer, rhcpMediaPlayer, seekBarId) }
                             }
 
                             R.id.radioButtonRhcpId -> {
-                                while (true) {
-                                    playTrackOne(rhcpMediaPlayer, acdcMediaPlayer, seekBarId)
-                                }
+                                while (true) { playTrackOne(rhcpMediaPlayer, acdcMediaPlayer, seekBarId) }
                             }
                         }
                     }
@@ -66,7 +61,6 @@ class MainActivity : AppCompatActivity(),CompoundButton.OnCheckedChangeListener 
         {
             exceptionAction(exception)
         }
-
     }
 
     //Инициализация песен
